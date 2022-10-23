@@ -1,0 +1,81 @@
+.galeria {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-columns-xl {
+  grid-template-columns: 1fr;
+}
+.grid-columns-l {
+  grid-template-columns: 2fr;
+}
+
+.galeria .foto {
+  cursor: pointer;
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 350px;
+  max-width: 300px;
+  background-size: cover;
+  background-position: top;
+  color: white;
+  text-shadow: 0px 0px 15px black;
+  text-align: left;
+  border-radius: 5px;
+  background-color: rgba(41, 41, 41, 0.267);
+}
+
+.foto p {
+  background-color: rgba(109, 85, 85, 0.575);
+  width: 100%;
+  padding: .25rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.galeria .foto:hover {
+  box-shadow: 0px 0px 8px 6px rgba(236, 223, 38, 0.623);
+  transform: scale(1.05); 
+  transition: transform 350ms;
+}
+
+.galeria .foto svg {
+  align-self: flex-end;
+  background-color: rgba(165, 165, 165, 0.651);
+  border-radius: 50%;
+  border: none;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+@media (min-width: 576px) {
+  .grid-columns-xl {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-columns-l {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+
+@media (min-width: 768px) {
+  .grid-columns-xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-columns-l {
+    grid-template-columns: repeat(3, 1fr);
+  } 
+}
+
+@media (min-width: 992px) {
+  .grid-columns-xl {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .grid-columns-l {
+    grid-template-columns: repeat(4, 1fr);
+  } 
+}

@@ -1,0 +1,16 @@
+@import 'https://fonts.googleapis.com/css2?family=Maitree:wght@200;500&display=swap';
+
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Maitree", serif;
+  text-align: center;
+  color: #d7e93a;
+  background-color: black;
+}
+
+h1 {
+  margin-bottom: 0;
+}
