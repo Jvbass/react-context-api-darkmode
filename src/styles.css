@@ -1,16 +1,47 @@
-@import 'https://fonts.googleapis.com/css2?family=Maitree:wght@200;500&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;1,300&display=swap');
 
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-body {
-  font-family: "Maitree", serif;
+.home {
   text-align: center;
-  color: #d7e93a;
-  background-color: black;
+  color: #e60303;
+  background-color: rgb(247, 247, 247) ;
 }
 
-h1 {
+.favHome {
+  height: 100vh;
+  text-align: center;
+  color: #e60303;
+  background-color: rgb(247, 247, 247);
+}
+
+.titlegallery{
   margin-bottom: 0;
+  padding-top: 1rem;
+  color: rgba(3, 5, 139, 0.877);
+  text-shadow: rgb(45, 65, 250) 1px 0 1rem;
+}
+
+.titlegalleryDark{
+  margin-bottom: 0;
+  padding-top: 1rem;
+  text-shadow: rgb(255, 0, 0) 1px 0 1.3rem;
+}
+
+.homeDark{
+background-color: rgb(10, 10, 10);
+text-align: center;
+color: rgb(236, 240, 0);
+}
+
+.favHomeDark{
+  height: 100vh;
+  text-align: center;
+  background-color: rgb(10, 10, 10);
+  color: rgb(236, 240, 0);
 }

@@ -5,6 +5,7 @@ import "./styles.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Context from "./context/context.js"
+import ThemeContext from "./context/ThemeContext.js";
 
 //importacion de componentes
 import Navbar from "./components/Navbar.jsx";
@@ -18,6 +19,7 @@ export default function App() {
  
   const [fotos, setFotos] = useState([])
   const [favoritos, setFavoritos] = useState([])
+  const [darkMode,setDarkMode] = useState()
 
    const handleFavs = (foto)=> {
     const enFavs = favoritos.includes(foto)
@@ -30,14 +32,18 @@ export default function App() {
       setFavoritos(favoritosActualizado)
     }
   }
+
+  const handleTheme = ()=> {
+    setDarkMode(!darkMode);
+  }
+
   const globalState = { fotos, favoritos, handleFavs }
-  
+  const themeState = {handleTheme, darkMode, setDarkMode}
 
   useEffect ( ()=> {
     fetch(url)
       .then((res) => res.json())
       .then((json)=> {
-        console.log(json)
       setFotos(json)
       })
       .catch((e) => console.log(e))
@@ -45,16 +51,20 @@ export default function App() {
   
   return (
     <div className="App">
-      <Context.Provider value={globalState}>
+
+    <ThemeContext.Provider value={themeState}>
         <BrowserRouter>
+
           <Navbar />
 
+          <Context.Provider value={globalState}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favoritos" element={<Favoritos />} />
           </Routes>
+          </Context.Provider>
         </BrowserRouter>
-      </Context.Provider>
+    </ThemeContext.Provider>
     </div>
   );
 }

@@ -6,7 +6,7 @@ const GaleriaFavs = ()=> {
     const {favoritos} = useContext(Context)
 return (
     <div>
-      <h1>Personajes favoritos</h1>
+
       <div className="p-3 galeria grid-columns-l">
         {
             favoritos.map((foto)=> {
