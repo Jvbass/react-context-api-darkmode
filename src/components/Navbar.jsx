@@ -15,7 +15,7 @@ const Navbar = ()=> {
       className={
         darkMode
           ? "btn fa-brands fa-galactic-republic"
-          : "btn fa-solid fa-jedi"
+          : "btn fa-brands fa-jedi-order"
       }
       
     ></span>
