@@ -38,7 +38,7 @@ export default function App() {
   }
 
   const globalState = { fotos, favoritos, handleFavs }
-  const themeState = {handleTheme, darkMode, setDarkMode}
+  const themeState = {handleTheme, darkMode}
 
   useEffect ( ()=> {
     fetch(url)

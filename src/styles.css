@@ -30,18 +30,17 @@
 .titlegalleryDark{
   margin-bottom: 0;
   padding-top: 1rem;
-  text-shadow: rgb(255, 0, 0) 1px 0 1.3rem;
+  text-shadow: rgb(228, 240, 58) 1px 0 1.5rem;
+  color: #e22020;
 }
 
 .homeDark{
 background-color: rgb(10, 10, 10);
 text-align: center;
-color: rgb(236, 240, 0);
 }
 
 .favHomeDark{
   height: 100vh;
   text-align: center;
   background-color: rgb(10, 10, 10);
-  color: rgb(236, 240, 0);
 }
